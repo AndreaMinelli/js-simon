@@ -7,9 +7,8 @@ const secondsElement = document.getElementById("seconds");
 //Recupero la data di chiusura del countdown
 const countdownDate = new Date("January 1, 2023 00:00:00").getTime();
 
-//Creo funzione per aggiornare countdown
-
-const countdown = setInterval(() => {
+//Creo funzione per il countdown
+const getCountdown = () => {
   const now = new Date().getTime();
   const time = countdownDate - now;
 
@@ -25,6 +24,14 @@ const countdown = setInterval(() => {
   minutesElement.innerText = minutes < 10 ? `0${minutes}` : minutes;
   secondsElement.innerText = seconds < 10 ? `0${seconds}` : seconds;
 
+  return time;
+};
+
+getCountdown();
+
+//Creo funzione per aggiornare countdown
+const countdown = setInterval(() => {
+  const time = getCountdown();
   //Imposto chiusura countdown
   if (time < 0) clearInterval(countdown);
 }, 1000);
