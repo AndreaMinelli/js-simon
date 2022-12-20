@@ -33,5 +33,5 @@ getCountdown();
 const countdown = setInterval(() => {
   const time = getCountdown();
   //Imposto chiusura countdown
-  if (time < 0) clearInterval(countdown);
+  if (time < 1000) clearInterval(countdown);
 }, 1000);
