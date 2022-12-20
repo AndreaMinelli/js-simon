@@ -24,4 +24,7 @@ const countdown = setInterval(() => {
   hoursElement.innerText = hours < 10 ? `0${hours}` : hours;
   minutesElement.innerText = minutes < 10 ? `0${minutes}` : minutes;
   secondsElement.innerText = seconds < 10 ? `0${seconds}` : seconds;
+
+  //Imposto chiusura countdown
+  if (time < 0) clearInterval(countdown);
 }, 1000);
