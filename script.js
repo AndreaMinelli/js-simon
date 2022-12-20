@@ -5,7 +5,7 @@ const minutesElement = document.getElementById("minutes");
 const secondsElement = document.getElementById("seconds");
 
 //Recupero la data di chiusura del countdown
-const countdownDate = new Date("January 1, 2023 00:00:00").getTime();
+const countdownDate = new Date("December 25, 2022 00:00:00").getTime();
 
 //Creo funzione per il countdown
 const getCountdown = () => {
